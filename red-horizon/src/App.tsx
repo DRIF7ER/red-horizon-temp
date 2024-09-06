@@ -3,11 +3,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import ApiCalls from "./components/ApiCalls/ApiCalls"
+import { Routes, Route } from "react-router-dom"
+// import "dotenv/config"
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <Routes>
+        <Route path='/' element={ <ApiCalls /> } />
+      </Routes>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
